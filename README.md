@@ -2,7 +2,7 @@
 
 ---
 
-### Repo de resoluciones - Cohorte 13b
+### Repositorio de resoluciones - Cohorte PT-13b Grupo C
 
 ---
 
