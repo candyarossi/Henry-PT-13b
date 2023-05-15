@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset=UTF-8>
+  <title></title>
+</head>
+
+<body>
+  <div id='app'></div>
+
+  <script src="https://unpkg.com/react@16.8/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16.8/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+
+  <script type="text/babel">
+    function Boton(props) {
+      return (
+        <button onClick={props.clickHandler}>
+          Click
+        </button>
+      )
+    };
+
+    function App() {
+
+      const clickHandler = () => {
+        window.location = 'http://www.google.com'
+      };
+      return (
+        <div>
+          <Boton clickHandler={clickHandler} />
+        </div>
+      )
+    };
+
+    ReactDOM.render(<App />, document.getElementById('app'));
+  </script>
+</body>
+
+</html>

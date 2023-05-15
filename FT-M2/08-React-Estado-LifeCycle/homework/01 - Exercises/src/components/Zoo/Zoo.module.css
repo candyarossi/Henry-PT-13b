@@ -1,0 +1,36 @@
+.divContent {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
+  color: #f6f4e6;
+}
+
+.divContentTitle {
+  width: 100vw;
+  height: 100px;
+  display:block;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: #4f772d;
+  padding-left: 1em;
+}
+
+.title {
+  font-size: 3em;
+  text-align: center;
+  margin-top: -0.5em;
+}
+
+.divContentTitle input {
+  border-radius: 0.5em;
+  margin-top: 0.4em;
+  margin-left: 0.2em;
+  padding: 0.2em;
+  border: solid #f6f4e6 ;
+  color: #363334 ;
+  font-size: 1em;
+}
