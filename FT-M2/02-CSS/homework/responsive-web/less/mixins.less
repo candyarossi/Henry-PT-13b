@@ -1,1 +1,23 @@
 // Mixins acá
+.flex(@direction, @wrap, @justify-content, @align-items) {
+  display: flex;
+  flex-flow: @direction @wrap;
+  justify-content: @justify-content;
+  align-items: @align-items;
+}
+
+.btn(@color, @background, @border) {
+  display: inline;
+  font-size: 15px;
+  font-weight: 200;
+  color: @color;
+  background-color: @background;
+  border-radius: @border;
+  padding: 4%;
+  cursor: pointer;
+  &:hover {
+    color: @background;
+    background-color: @color;
+    border: 1px solid @background;
+  }
+}

@@ -2,70 +2,50 @@
 
 .home {
   .intro {
-    h2 {
-      padding: 15px;
-    }
-
-    p {
-      padding: 0 15px;
+    img {
+      border-radius: 20px;
+      margin: 1% 2.5% 1% 2.5%;
+      @media @phone {
+        width: 95%;
+      }
     }
   }
 
   .music-images {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-
-    img {
-      width: 28%;
-      margin: 20px 2.5%;
-      border-radius: 20px;
-      height: 100%;
-    }
-  }
-
-  .musica-nueva {
-    padding: 15px;
-
-    h3 {
-      margin-top: 11px;
-    }
-
-    p {
-      margin-top: 13px;
+    @media @phone {
+      .tecnologia,
+      .ondas {
+        display: none;
+      }
+      .auricular {
+        width: 95%;
+      }
     }
   }
 
   .actual {
-    margin-top: 60px;
-    border-top: 1px solid @main-border-color;
-    padding: 50px 60px;
-    display: flex;
-    justify-content: center;
-
     .actual-text {
-      width: 50%;
-
-      h3 {
-        margin-bottom: 10px;
-      }
-
-      p {
-        margin-bottom: 26px;
-      }
-
       .btn {
+        .btn(white, @btn-bg-color, 10px);
       }
     }
 
-    .actual-img {
-      width: 46%;
-      margin-left: 4%;
-
-      img {
+    @media @phone {
+      .flex(column-reverse, nowrap, flex-start, center);
+      width: 100%;
+      padding: 1.5% 2.5%;
+      margin-bottom: 7%;
+      .actual-text {
         width: 100%;
-        height: auto;
-        border-radius: 10px;
+        .btn {
+          display: block;
+          text-align: center;
+        }
+      }
+      .actual-img {
+        width: 100%;
+        margin: 0;
+        padding: 1.5% 0;
       }
     }
   }
