@@ -1,0 +1,17 @@
+.input {
+  margin-right: 15px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.button {
+  background-color: pink;
+  color: purple;
+  border: 0px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 10px;
+  margin: 25px 15px 25px 0px;
+  cursor: pointer;
+}

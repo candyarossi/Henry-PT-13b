@@ -1,9 +1,10 @@
-import Card from "./Card";
+import Card from "../Card/Card";
+import SContainer from "../SContainer/SContainer";
 
 export default function Cards(props) {
   const { characters } = props;
   return (
-    <div>
+    <SContainer>
       {characters.map((c) => (
         <Card
           name={c.name}
@@ -16,6 +17,6 @@ export default function Cards(props) {
           onClose={() => alert("Eliminar")}
         />
       ))}
-    </div>
+    </SContainer>
   );
 }
