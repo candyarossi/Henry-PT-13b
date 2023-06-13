@@ -2,7 +2,7 @@ import Card from "../Card/Card";
 import SContainer from "../SContainer/SContainer";
 
 export default function Cards(props) {
-  const { characters } = props;
+  const { characters, onClose } = props;
   return (
     <SContainer>
       {characters.map((c) => (
@@ -14,7 +14,7 @@ export default function Cards(props) {
           origin={c.origin}
           image={c.image}
           key={c.id}
-          onClose={() => alert("Eliminar")}
+          onClose={() => onClose(c.id)}
         />
       ))}
     </SContainer>

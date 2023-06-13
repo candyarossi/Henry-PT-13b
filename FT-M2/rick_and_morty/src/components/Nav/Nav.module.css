@@ -1,0 +1,31 @@
+nav {
+    background-color: rgb(72, 61, 139, 0.7);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    margin-bottom: 20px;
+    margin-top: -5px;
+  }
+  
+  nav img{
+    filter: hue-rotate(100deg);
+  }
+  
+  .links{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    color: violet;
+    padding: 10px;
+    margin: 0px 15px;
+    background-color: transparent;
+  }
+  
+  .links:hover{
+    color: white;
+    background-color: rgb(238, 130, 238, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+  }
