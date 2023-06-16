@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const DivCard = styled.div`
   display: inline-block;
@@ -46,7 +47,12 @@ export default function Card(props) {
   return (
     <DivCard>
       <Button onClick={props.onClose}>X</Button>
-      <h2 style={{ textDecoration: "none", color: "white" }}>{props.name}</h2>
+      <Link
+        to={`/detail/${props.id}`}
+        style={{ textDecoration: "none", color: "white" }}
+      >
+        <h2>{props.name}</h2>
+      </Link>
       {/* {<h4>{props.status}</h4>} */}
       <h4 style={styleSpecie}>{props.species}</h4>
       <h4 style={styleGender}>{props.gender}</h4>

@@ -4,6 +4,9 @@ import Nav from "./components/Nav/Nav.jsx";
 // import characters from "./data.js";
 import { useState } from "react";
 import axios from "axios";
+import { Route, Routes } from "react-router-dom";
+import About from "./components/About/About";
+import Detail from "./components/Detail/Detail";
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -35,7 +38,7 @@ function App() {
     onSearch(randomId);
   }
 
-  function onClose(id){
+  function onClose(id) {
     setCharacters(characters.filter((character) => character.id !== id));
   }
 
@@ -43,7 +46,15 @@ function App() {
     <div className="App">
       {/* <SearchBar onSearch={(characterID) => window.alert(characterID)} /> */}
       <Nav onSearch={onSearch} random={random} />
-      <Cards characters={characters} onClose={onClose} />
+
+      <Routes>
+        <Route
+          path="/home"
+          element={<Cards characters={characters} onClose={onClose} />}
+        />
+        <Route path="/about" element={<About />} />
+        <Route path="/detail/:id" element={<Detail />} />
+      </Routes>
     </div>
   );
 }
