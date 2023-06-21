@@ -2,7 +2,7 @@ import SearchBar from "../SearchBar/SearchBar.jsx";
 import style from "./Nav.module.css";
 import { Link } from "react-router-dom";
 
-export default function Nav({ onSearch, random }) {
+export default function Nav({ onSearch, random, logout }) {
   return (
     <nav>
       <img
@@ -16,6 +16,9 @@ export default function Nav({ onSearch, random }) {
       <Link to="/about" className={style.links}>
         About
       </Link>
+      <button className={style.links} onClick={logout}>
+        LogOut
+      </button>
       <SearchBar onSearch={onSearch} random={random} />
     </nav>
   );
