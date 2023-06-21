@@ -37,22 +37,26 @@
 
 <div class="hide">
 
--  [01 - DOM avanzado](./FT-M2/01-DOM/homework/DOMhomework.js)
--  [02 - CSS Avanzado](./FT-M2/02-CSS/homework/responsive-web/)
--  [03 - ES6 - Selectores](./FT-M2/03-ES6/homework/src/selector.js)
--  [04 - AJAX]()
--  [05 - Módulos & Bundlers]()
+-  [DOM Avanzado](./FT-M2/01-DOM/homework/DOMhomework.js)
+-  [CSS Avanzado](./FT-M2/02-CSS/homework/responsive-web/)
+-  [ES6 - Selectores](./FT-M2/03-ES6/homework/src/selector.js)
+-  [AJAX](./FT-M2/04-Ajax/homework/index.js)
+-  [Módulos & Bundlers](./FT-M2/05-Bundlers/homework/browser/)
 -  React:
-   1. [Intro]()
-   2. [Estilos]()
-   3. [Estados y LifeCycle]()
-   4. [Routing (react-router)]()
-   5. [Formularios]()
+   1. [Intro](./FT-M2/06-React-Intro/homework/)
+   2. [Estilos](./FT-M2/07-React-Estilos/homework/)
+   3. [Estados y LifeCycle](./FT-M2/08-React-Estado-LifeCycle/homework/)
+   4. [Routing](./FT-M2/09-React-Routing/homework/)
+   5. [Formularios](./FT-M2/10-React-Forms/homework/)
 -  Redux:
-   1. [Intro]()
-   2. [React-Redux]()
+   1. [Intro](./FT-M2/11-Redux/homework/)
+   2. [React-Redux](./FT-M2/12-React-Redux/homework/)
 -  Hooks:
-   1. [Hooks]()
+   1. [Hooks](./FT-M2/13-React-Hooks/homework/)
+
+<br>
+
+-  [PROYECTO RICK & MORTY](./FT-M2/rick_and_morty/)
 
 </div>
 
