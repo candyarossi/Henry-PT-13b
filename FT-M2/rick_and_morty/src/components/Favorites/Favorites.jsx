@@ -1,27 +1,36 @@
 import Card from "../Card/Card";
+import { connect } from "react-redux";
 import SContainer from "../SContainer/SContainer";
 
-export default function Cards(props) {
-  const { characters, onClose } = props;
+export function Favorites({ favorites }) {
   return (
     <SContainer>
-      {characters.length === 0 ? (
+      {favorites.length === 0 ? (
         <p style={{ color: "violet", marginTop: "150px", fontSize: "24px" }}>
-          ¡Busca un personaje!
+          ¡Agrega un favorito!
         </p>
       ) : (
-        characters.map((e, i) => (
+        favorites.map((e, i) => (
           <Card
             id={e.id}
             name={e.name}
             species={e.species}
             gender={e.gender}
             image={e.image}
-            onClose={() => props.onClose(e.id)}
-            key={i}
+            onClose={false}
+            fav={true}
+            key={i++}
           />
         ))
       )}
     </SContainer>
   );
 }
+
+export function mapStateToProps(state) {
+  return {
+    favorites: state.favorites,
+  };
+}
+
+export default connect(mapStateToProps, null)(Favorites);
