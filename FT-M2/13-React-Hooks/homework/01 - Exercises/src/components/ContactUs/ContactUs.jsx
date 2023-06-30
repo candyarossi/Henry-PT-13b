@@ -1,19 +1,38 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { enviarForm } from "../../redux/actions/actions";
 
 const ContactUs = () => {
+  const [form, setForm] = React.useState({
+    nombre: "",
+    email: "",
+    asunto: "",
+    mensaje: "",
+  });
+
+  const dispatch = useDispatch();
+
+  const handleInput = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    dispatch(enviarForm(form));
+    setForm({
+      nombre: "",
+      email: "",
+      asunto: "",
+      mensaje: "",
+    });
+  };
+
   return (
-    <div>
-      <form className="contactBg">
-        <label htmlFor="nombre">Nombre: </label>
-        <input name="nombre" />
-        <label htmlFor="email">Email: </label>
-        <input name="email" />
-        <label htmlFor="asunto">Asunto: </label>
-        <input name="asunto" />
-        <label htmlFor="mensaje">Mensaje: </label>
-        <input name="mensaje" />
-        <button>Enviar</button>
-      </form>
+    <div className="contactBg">
+      <input name="nombre" onChange={handleInput} value={form.nombre}></input>
+      <input name="email" onChange={handleInput} value={form.email}></input>
+      <input name="asunto" onChange={handleInput} value={form.asunto}></input>
+      <input name="mensaje" onChange={handleInput} value={form.mensaje}></input>
+      <button onClick={handleSubmit}>ENVIAR</button>
     </div>
   );
 };

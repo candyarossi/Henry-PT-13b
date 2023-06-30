@@ -44,7 +44,6 @@ const styleGender = {
 };
 
 export function Card(props) {
-  // style={{display: 'flex', justifyContent: 'space-between'}}
   const [isFav, setIsFav] = useState(props.fav);
 
   useEffect(() => {
@@ -54,7 +53,7 @@ export function Card(props) {
           setIsFav(true);
         }
       });
-  }, [props.favorites]);
+  });
 
   function handleFavorite() {
     if (isFav) {
@@ -67,8 +66,6 @@ export function Card(props) {
         species: props.species,
         gender: props.gender,
         image: props.image,
-        status: props.status,
-        origin: props.origin,
         id: props.id,
       });
     }
@@ -88,13 +85,12 @@ export function Card(props) {
         to={`/detail/${props.id}`}
         style={{ textDecoration: "none", color: "white" }}
       >
-        <h2 style={{ marginBottom: "0" }}>{props.name}</h2>
+        <h2>{props.name}</h2>
       </Link>
-      {/* {<h4>{props.status}</h4>} */}
-      <h4 style={styleSpecie}>{props.species}</h4>
-      <h4 style={styleGender}>{props.gender}</h4>
+      <h2 style={styleSpecie}>{props.species}</h2>
+      <h2 style={styleGender}>{props.gender}</h2>
       <h4 style={{ color: "yellow", display: "inline-block" }}>{props.id}</h4>
-      {/* {<h4>{props.origin.name}</h4>} */}
+      {/* <h2 style={styleName}>{props.name}</h2> */}
       <img style={{ display: "block" }} src={props.image} alt="" />
     </DivCard>
   );
